@@ -1,0 +1,336 @@
+________________ tap assignments ________________assign tap0 = 16'hffe6;
+
+assign tap1 = 16'hffec;
+
+assign tap2 = 16'hffe8;
+
+assign tap3 = 16'hffe6;
+
+assign tap4 = 16'hffe8;
+
+assign tap5 = 16'hffef;
+
+assign tap6 = 16'hfffd;
+
+assign tap7 = 16'h0011;
+
+assign tap8 = 16'h002c;
+
+assign tap9 = 16'h004e;
+
+assign tap10 = 16'h0075;
+
+assign tap11 = 16'h009d;
+
+assign tap12 = 16'h00c5;
+
+assign tap13 = 16'h00e7;
+
+assign tap14 = 16'h0100;
+
+assign tap15 = 16'h010b;
+
+assign tap16 = 16'h0105;
+
+assign tap17 = 16'h00ea;
+
+assign tap18 = 16'h00ba;
+
+assign tap19 = 16'h0075;
+
+assign tap20 = 16'h001f;
+
+assign tap21 = 16'hffbb;
+
+assign tap22 = 16'hff53;
+
+assign tap23 = 16'hfeee;
+
+assign tap24 = 16'hfe96;
+
+assign tap25 = 16'hfe56;
+
+assign tap26 = 16'hfe36;
+
+assign tap27 = 16'hfe3e;
+
+assign tap28 = 16'hfe72;
+
+assign tap29 = 16'hfed3;
+
+assign tap30 = 16'hff5d;
+
+assign tap31 = 16'h0008;
+
+assign tap32 = 16'h00c8;
+
+assign tap33 = 16'h018c;
+
+assign tap34 = 16'h0242;
+
+assign tap35 = 16'h02d7;
+
+assign tap36 = 16'h0338;
+
+assign tap37 = 16'h0356;
+
+assign tap38 = 16'h0326;
+
+assign tap39 = 16'h02a4;
+
+assign tap40 = 16'h01d2;
+
+assign tap41 = 16'h00bb;
+
+assign tap42 = 16'hff74;
+
+assign tap43 = 16'hfe15;
+
+assign tap44 = 16'hfcbe;
+
+assign tap45 = 16'hfb91;
+
+assign tap46 = 16'hfaaf;
+
+assign tap47 = 16'hfa37;
+
+assign tap48 = 16'hfa3f;
+
+assign tap49 = 16'hfad6;
+
+assign tap50 = 16'hfbfc;
+
+assign tap51 = 16'hfda6;
+
+assign tap52 = 16'hffb9;
+
+assign tap53 = 16'h020e;
+
+assign tap54 = 16'h0473;
+
+assign tap55 = 16'h06b0;
+
+assign tap56 = 16'h0889;
+
+assign tap57 = 16'h09c5;
+
+assign tap58 = 16'h0a34;
+
+assign tap59 = 16'h09b4;
+
+assign tap60 = 16'h0834;
+
+assign tap61 = 16'h05b8;
+
+assign tap62 = 16'h025f;
+
+assign tap63 = 16'hfe5c;
+
+assign tap64 = 16'hf9fb;
+
+assign tap65 = 16'hf597;
+
+assign tap66 = 16'hf19a;
+
+assign tap67 = 16'hee71;
+
+assign tap68 = 16'hec87;
+
+assign tap69 = 16'hec3c;
+
+assign tap70 = 16'heddb;
+
+assign tap71 = 16'hf195;
+
+assign tap72 = 16'hf77a;
+
+assign tap73 = 16'hff75;
+
+assign tap74 = 16'h094e;
+
+assign tap75 = 16'h14a8;
+
+assign tap76 = 16'h2108;
+
+assign tap77 = 16'h2ddb;
+
+assign tap78 = 16'h3a7f;
+
+assign tap79 = 16'h464c;
+
+assign tap80 = 16'h50a1;
+
+assign tap81 = 16'h58ef;
+
+assign tap82 = 16'h5ebe;
+
+assign tap83 = 16'h61bb;
+
+assign tap84 = 16'h61bb;
+
+assign tap85 = 16'h5ebe;
+
+assign tap86 = 16'h58ef;
+
+assign tap87 = 16'h50a1;
+
+assign tap88 = 16'h464c;
+
+assign tap89 = 16'h3a7f;
+
+assign tap90 = 16'h2ddb;
+
+assign tap91 = 16'h2108;
+
+assign tap92 = 16'h14a8;
+
+assign tap93 = 16'h094e;
+
+assign tap94 = 16'hff75;
+
+assign tap95 = 16'hf77a;
+
+assign tap96 = 16'hf195;
+
+assign tap97 = 16'heddb;
+
+assign tap98 = 16'hec3c;
+
+assign tap99 = 16'hec87;
+
+assign tap100 = 16'hee71;
+
+assign tap101 = 16'hf19a;
+
+assign tap102 = 16'hf597;
+
+assign tap103 = 16'hf9fb;
+
+assign tap104 = 16'hfe5c;
+
+assign tap105 = 16'h025f;
+
+assign tap106 = 16'h05b8;
+
+assign tap107 = 16'h0834;
+
+assign tap108 = 16'h09b4;
+
+assign tap109 = 16'h0a34;
+
+assign tap110 = 16'h09c5;
+
+assign tap111 = 16'h0889;
+
+assign tap112 = 16'h06b0;
+
+assign tap113 = 16'h0473;
+
+assign tap114 = 16'h020e;
+
+assign tap115 = 16'hffb9;
+
+assign tap116 = 16'hfda6;
+
+assign tap117 = 16'hfbfc;
+
+assign tap118 = 16'hfad6;
+
+assign tap119 = 16'hfa3f;
+
+assign tap120 = 16'hfa37;
+
+assign tap121 = 16'hfaaf;
+
+assign tap122 = 16'hfb91;
+
+assign tap123 = 16'hfcbe;
+
+assign tap124 = 16'hfe15;
+
+assign tap125 = 16'hff74;
+
+assign tap126 = 16'h00bb;
+
+assign tap127 = 16'h01d2;
+
+assign tap128 = 16'h02a4;
+
+assign tap129 = 16'h0326;
+
+assign tap130 = 16'h0356;
+
+assign tap131 = 16'h0338;
+
+assign tap132 = 16'h02d7;
+
+assign tap133 = 16'h0242;
+
+assign tap134 = 16'h018c;
+
+assign tap135 = 16'h00c8;
+
+assign tap136 = 16'h0008;
+
+assign tap137 = 16'hff5d;
+
+assign tap138 = 16'hfed3;
+
+assign tap139 = 16'hfe72;
+
+assign tap140 = 16'hfe3e;
+
+assign tap141 = 16'hfe36;
+
+assign tap142 = 16'hfe56;
+
+assign tap143 = 16'hfe96;
+
+assign tap144 = 16'hfeee;
+
+assign tap145 = 16'hff53;
+
+assign tap146 = 16'hffbb;
+
+assign tap147 = 16'h001f;
+
+assign tap148 = 16'h0075;
+
+assign tap149 = 16'h00ba;
+
+assign tap150 = 16'h00ea;
+
+assign tap151 = 16'h0105;
+
+assign tap152 = 16'h010b;
+
+assign tap153 = 16'h0100;
+
+assign tap154 = 16'h00e7;
+
+assign tap155 = 16'h00c5;
+
+assign tap156 = 16'h009d;
+
+assign tap157 = 16'h0075;
+
+assign tap158 = 16'h004e;
+
+assign tap159 = 16'h002c;
+
+assign tap160 = 16'h0011;
+
+assign tap161 = 16'hfffd;
+
+assign tap162 = 16'hffef;
+
+assign tap163 = 16'hffe8;
+
+assign tap164 = 16'hffe6;
+
+assign tap165 = 16'hffe8;
+
+assign tap166 = 16'hffec;
+
+assign tap167 = 16'hffe6;;
+

@@ -1,0 +1,671 @@
+________________ multiply accumulate stage ________________buff0 <= s_axis_fir_tdata;
+acc0 <= tap0 * buff0;
+
+buff1 <= buff0;
+acc1 <= tap1 * buff1;
+acc01 <= acc0 + acc1;
+
+buff2 <= buff1;
+acc2 <= tap2 * buff2;
+acc012 <= acc01 + acc2;
+
+buff3 <= buff2;
+acc3 <= tap3 * buff3;
+acc2_3 <= acc012 + acc3;
+
+buff4 <= buff3;
+acc4 <= tap4 * buff4;
+acc3_4 <= acc2_3 + acc4;
+
+buff5 <= buff4;
+acc5 <= tap5 * buff5;
+acc4_5 <= acc3_4 + acc5;
+
+buff6 <= buff5;
+acc6 <= tap6 * buff6;
+acc5_6 <= acc4_5 + acc6;
+
+buff7 <= buff6;
+acc7 <= tap7 * buff7;
+acc6_7 <= acc5_6 + acc7;
+
+buff8 <= buff7;
+acc8 <= tap8 * buff8;
+acc7_8 <= acc6_7 + acc8;
+
+buff9 <= buff8;
+acc9 <= tap9 * buff9;
+acc8_9 <= acc7_8 + acc9;
+
+buff10 <= buff9;
+acc10 <= tap10 * buff10;
+acc9_10 <= acc8_9 + acc10;
+
+buff11 <= buff10;
+acc11 <= tap11 * buff11;
+acc10_11 <= acc9_10 + acc11;
+
+buff12 <= buff11;
+acc12 <= tap12 * buff12;
+acc11_12 <= acc10_11 + acc12;
+
+buff13 <= buff12;
+acc13 <= tap13 * buff13;
+acc12_13 <= acc11_12 + acc13;
+
+buff14 <= buff13;
+acc14 <= tap14 * buff14;
+acc13_14 <= acc12_13 + acc14;
+
+buff15 <= buff14;
+acc15 <= tap15 * buff15;
+acc14_15 <= acc13_14 + acc15;
+
+buff16 <= buff15;
+acc16 <= tap16 * buff16;
+acc15_16 <= acc14_15 + acc16;
+
+buff17 <= buff16;
+acc17 <= tap17 * buff17;
+acc16_17 <= acc15_16 + acc17;
+
+buff18 <= buff17;
+acc18 <= tap18 * buff18;
+acc17_18 <= acc16_17 + acc18;
+
+buff19 <= buff18;
+acc19 <= tap19 * buff19;
+acc18_19 <= acc17_18 + acc19;
+
+buff20 <= buff19;
+acc20 <= tap20 * buff20;
+acc19_20 <= acc18_19 + acc20;
+
+buff21 <= buff20;
+acc21 <= tap21 * buff21;
+acc20_21 <= acc19_20 + acc21;
+
+buff22 <= buff21;
+acc22 <= tap22 * buff22;
+acc21_22 <= acc20_21 + acc22;
+
+buff23 <= buff22;
+acc23 <= tap23 * buff23;
+acc22_23 <= acc21_22 + acc23;
+
+buff24 <= buff23;
+acc24 <= tap24 * buff24;
+acc23_24 <= acc22_23 + acc24;
+
+buff25 <= buff24;
+acc25 <= tap25 * buff25;
+acc24_25 <= acc23_24 + acc25;
+
+buff26 <= buff25;
+acc26 <= tap26 * buff26;
+acc25_26 <= acc24_25 + acc26;
+
+buff27 <= buff26;
+acc27 <= tap27 * buff27;
+acc26_27 <= acc25_26 + acc27;
+
+buff28 <= buff27;
+acc28 <= tap28 * buff28;
+acc27_28 <= acc26_27 + acc28;
+
+buff29 <= buff28;
+acc29 <= tap29 * buff29;
+acc28_29 <= acc27_28 + acc29;
+
+buff30 <= buff29;
+acc30 <= tap30 * buff30;
+acc29_30 <= acc28_29 + acc30;
+
+buff31 <= buff30;
+acc31 <= tap31 * buff31;
+acc30_31 <= acc29_30 + acc31;
+
+buff32 <= buff31;
+acc32 <= tap32 * buff32;
+acc31_32 <= acc30_31 + acc32;
+
+buff33 <= buff32;
+acc33 <= tap33 * buff33;
+acc32_33 <= acc31_32 + acc33;
+
+buff34 <= buff33;
+acc34 <= tap34 * buff34;
+acc33_34 <= acc32_33 + acc34;
+
+buff35 <= buff34;
+acc35 <= tap35 * buff35;
+acc34_35 <= acc33_34 + acc35;
+
+buff36 <= buff35;
+acc36 <= tap36 * buff36;
+acc35_36 <= acc34_35 + acc36;
+
+buff37 <= buff36;
+acc37 <= tap37 * buff37;
+acc36_37 <= acc35_36 + acc37;
+
+buff38 <= buff37;
+acc38 <= tap38 * buff38;
+acc37_38 <= acc36_37 + acc38;
+
+buff39 <= buff38;
+acc39 <= tap39 * buff39;
+acc38_39 <= acc37_38 + acc39;
+
+buff40 <= buff39;
+acc40 <= tap40 * buff40;
+acc39_40 <= acc38_39 + acc40;
+
+buff41 <= buff40;
+acc41 <= tap41 * buff41;
+acc40_41 <= acc39_40 + acc41;
+
+buff42 <= buff41;
+acc42 <= tap42 * buff42;
+acc41_42 <= acc40_41 + acc42;
+
+buff43 <= buff42;
+acc43 <= tap43 * buff43;
+acc42_43 <= acc41_42 + acc43;
+
+buff44 <= buff43;
+acc44 <= tap44 * buff44;
+acc43_44 <= acc42_43 + acc44;
+
+buff45 <= buff44;
+acc45 <= tap45 * buff45;
+acc44_45 <= acc43_44 + acc45;
+
+buff46 <= buff45;
+acc46 <= tap46 * buff46;
+acc45_46 <= acc44_45 + acc46;
+
+buff47 <= buff46;
+acc47 <= tap47 * buff47;
+acc46_47 <= acc45_46 + acc47;
+
+buff48 <= buff47;
+acc48 <= tap48 * buff48;
+acc47_48 <= acc46_47 + acc48;
+
+buff49 <= buff48;
+acc49 <= tap49 * buff49;
+acc48_49 <= acc47_48 + acc49;
+
+buff50 <= buff49;
+acc50 <= tap50 * buff50;
+acc49_50 <= acc48_49 + acc50;
+
+buff51 <= buff50;
+acc51 <= tap51 * buff51;
+acc50_51 <= acc49_50 + acc51;
+
+buff52 <= buff51;
+acc52 <= tap52 * buff52;
+acc51_52 <= acc50_51 + acc52;
+
+buff53 <= buff52;
+acc53 <= tap53 * buff53;
+acc52_53 <= acc51_52 + acc53;
+
+buff54 <= buff53;
+acc54 <= tap54 * buff54;
+acc53_54 <= acc52_53 + acc54;
+
+buff55 <= buff54;
+acc55 <= tap55 * buff55;
+acc54_55 <= acc53_54 + acc55;
+
+buff56 <= buff55;
+acc56 <= tap56 * buff56;
+acc55_56 <= acc54_55 + acc56;
+
+buff57 <= buff56;
+acc57 <= tap57 * buff57;
+acc56_57 <= acc55_56 + acc57;
+
+buff58 <= buff57;
+acc58 <= tap58 * buff58;
+acc57_58 <= acc56_57 + acc58;
+
+buff59 <= buff58;
+acc59 <= tap59 * buff59;
+acc58_59 <= acc57_58 + acc59;
+
+buff60 <= buff59;
+acc60 <= tap60 * buff60;
+acc59_60 <= acc58_59 + acc60;
+
+buff61 <= buff60;
+acc61 <= tap61 * buff61;
+acc60_61 <= acc59_60 + acc61;
+
+buff62 <= buff61;
+acc62 <= tap62 * buff62;
+acc61_62 <= acc60_61 + acc62;
+
+buff63 <= buff62;
+acc63 <= tap63 * buff63;
+acc62_63 <= acc61_62 + acc63;
+
+buff64 <= buff63;
+acc64 <= tap64 * buff64;
+acc63_64 <= acc62_63 + acc64;
+
+buff65 <= buff64;
+acc65 <= tap65 * buff65;
+acc64_65 <= acc63_64 + acc65;
+
+buff66 <= buff65;
+acc66 <= tap66 * buff66;
+acc65_66 <= acc64_65 + acc66;
+
+buff67 <= buff66;
+acc67 <= tap67 * buff67;
+acc66_67 <= acc65_66 + acc67;
+
+buff68 <= buff67;
+acc68 <= tap68 * buff68;
+acc67_68 <= acc66_67 + acc68;
+
+buff69 <= buff68;
+acc69 <= tap69 * buff69;
+acc68_69 <= acc67_68 + acc69;
+
+buff70 <= buff69;
+acc70 <= tap70 * buff70;
+acc69_70 <= acc68_69 + acc70;
+
+buff71 <= buff70;
+acc71 <= tap71 * buff71;
+acc70_71 <= acc69_70 + acc71;
+
+buff72 <= buff71;
+acc72 <= tap72 * buff72;
+acc71_72 <= acc70_71 + acc72;
+
+buff73 <= buff72;
+acc73 <= tap73 * buff73;
+acc72_73 <= acc71_72 + acc73;
+
+buff74 <= buff73;
+acc74 <= tap74 * buff74;
+acc73_74 <= acc72_73 + acc74;
+
+buff75 <= buff74;
+acc75 <= tap75 * buff75;
+acc74_75 <= acc73_74 + acc75;
+
+buff76 <= buff75;
+acc76 <= tap76 * buff76;
+acc75_76 <= acc74_75 + acc76;
+
+buff77 <= buff76;
+acc77 <= tap77 * buff77;
+acc76_77 <= acc75_76 + acc77;
+
+buff78 <= buff77;
+acc78 <= tap78 * buff78;
+acc77_78 <= acc76_77 + acc78;
+
+buff79 <= buff78;
+acc79 <= tap79 * buff79;
+acc78_79 <= acc77_78 + acc79;
+
+buff80 <= buff79;
+acc80 <= tap80 * buff80;
+acc79_80 <= acc78_79 + acc80;
+
+buff81 <= buff80;
+acc81 <= tap81 * buff81;
+acc80_81 <= acc79_80 + acc81;
+
+buff82 <= buff81;
+acc82 <= tap82 * buff82;
+acc81_82 <= acc80_81 + acc82;
+
+buff83 <= buff82;
+acc83 <= tap83 * buff83;
+acc82_83 <= acc81_82 + acc83;
+
+buff84 <= buff83;
+acc84 <= tap84 * buff84;
+acc83_84 <= acc82_83 + acc84;
+
+buff85 <= buff84;
+acc85 <= tap85 * buff85;
+acc84_85 <= acc83_84 + acc85;
+
+buff86 <= buff85;
+acc86 <= tap86 * buff86;
+acc85_86 <= acc84_85 + acc86;
+
+buff87 <= buff86;
+acc87 <= tap87 * buff87;
+acc86_87 <= acc85_86 + acc87;
+
+buff88 <= buff87;
+acc88 <= tap88 * buff88;
+acc87_88 <= acc86_87 + acc88;
+
+buff89 <= buff88;
+acc89 <= tap89 * buff89;
+acc88_89 <= acc87_88 + acc89;
+
+buff90 <= buff89;
+acc90 <= tap90 * buff90;
+acc89_90 <= acc88_89 + acc90;
+
+buff91 <= buff90;
+acc91 <= tap91 * buff91;
+acc90_91 <= acc89_90 + acc91;
+
+buff92 <= buff91;
+acc92 <= tap92 * buff92;
+acc91_92 <= acc90_91 + acc92;
+
+buff93 <= buff92;
+acc93 <= tap93 * buff93;
+acc92_93 <= acc91_92 + acc93;
+
+buff94 <= buff93;
+acc94 <= tap94 * buff94;
+acc93_94 <= acc92_93 + acc94;
+
+buff95 <= buff94;
+acc95 <= tap95 * buff95;
+acc94_95 <= acc93_94 + acc95;
+
+buff96 <= buff95;
+acc96 <= tap96 * buff96;
+acc95_96 <= acc94_95 + acc96;
+
+buff97 <= buff96;
+acc97 <= tap97 * buff97;
+acc96_97 <= acc95_96 + acc97;
+
+buff98 <= buff97;
+acc98 <= tap98 * buff98;
+acc97_98 <= acc96_97 + acc98;
+
+buff99 <= buff98;
+acc99 <= tap99 * buff99;
+acc98_99 <= acc97_98 + acc99;
+
+buff100 <= buff99;
+acc100 <= tap100 * buff100;
+acc99_100 <= acc98_99 + acc100;
+
+buff101 <= buff100;
+acc101 <= tap101 * buff101;
+acc100_101 <= acc99_100 + acc101;
+
+buff102 <= buff101;
+acc102 <= tap102 * buff102;
+acc101_102 <= acc100_101 + acc102;
+
+buff103 <= buff102;
+acc103 <= tap103 * buff103;
+acc102_103 <= acc101_102 + acc103;
+
+buff104 <= buff103;
+acc104 <= tap104 * buff104;
+acc103_104 <= acc102_103 + acc104;
+
+buff105 <= buff104;
+acc105 <= tap105 * buff105;
+acc104_105 <= acc103_104 + acc105;
+
+buff106 <= buff105;
+acc106 <= tap106 * buff106;
+acc105_106 <= acc104_105 + acc106;
+
+buff107 <= buff106;
+acc107 <= tap107 * buff107;
+acc106_107 <= acc105_106 + acc107;
+
+buff108 <= buff107;
+acc108 <= tap108 * buff108;
+acc107_108 <= acc106_107 + acc108;
+
+buff109 <= buff108;
+acc109 <= tap109 * buff109;
+acc108_109 <= acc107_108 + acc109;
+
+buff110 <= buff109;
+acc110 <= tap110 * buff110;
+acc109_110 <= acc108_109 + acc110;
+
+buff111 <= buff110;
+acc111 <= tap111 * buff111;
+acc110_111 <= acc109_110 + acc111;
+
+buff112 <= buff111;
+acc112 <= tap112 * buff112;
+acc111_112 <= acc110_111 + acc112;
+
+buff113 <= buff112;
+acc113 <= tap113 * buff113;
+acc112_113 <= acc111_112 + acc113;
+
+buff114 <= buff113;
+acc114 <= tap114 * buff114;
+acc113_114 <= acc112_113 + acc114;
+
+buff115 <= buff114;
+acc115 <= tap115 * buff115;
+acc114_115 <= acc113_114 + acc115;
+
+buff116 <= buff115;
+acc116 <= tap116 * buff116;
+acc115_116 <= acc114_115 + acc116;
+
+buff117 <= buff116;
+acc117 <= tap117 * buff117;
+acc116_117 <= acc115_116 + acc117;
+
+buff118 <= buff117;
+acc118 <= tap118 * buff118;
+acc117_118 <= acc116_117 + acc118;
+
+buff119 <= buff118;
+acc119 <= tap119 * buff119;
+acc118_119 <= acc117_118 + acc119;
+
+buff120 <= buff119;
+acc120 <= tap120 * buff120;
+acc119_120 <= acc118_119 + acc120;
+
+buff121 <= buff120;
+acc121 <= tap121 * buff121;
+acc120_121 <= acc119_120 + acc121;
+
+buff122 <= buff121;
+acc122 <= tap122 * buff122;
+acc121_122 <= acc120_121 + acc122;
+
+buff123 <= buff122;
+acc123 <= tap123 * buff123;
+acc122_123 <= acc121_122 + acc123;
+
+buff124 <= buff123;
+acc124 <= tap124 * buff124;
+acc123_124 <= acc122_123 + acc124;
+
+buff125 <= buff124;
+acc125 <= tap125 * buff125;
+acc124_125 <= acc123_124 + acc125;
+
+buff126 <= buff125;
+acc126 <= tap126 * buff126;
+acc125_126 <= acc124_125 + acc126;
+
+buff127 <= buff126;
+acc127 <= tap127 * buff127;
+acc126_127 <= acc125_126 + acc127;
+
+buff128 <= buff127;
+acc128 <= tap128 * buff128;
+acc127_128 <= acc126_127 + acc128;
+
+buff129 <= buff128;
+acc129 <= tap129 * buff129;
+acc128_129 <= acc127_128 + acc129;
+
+buff130 <= buff129;
+acc130 <= tap130 * buff130;
+acc129_130 <= acc128_129 + acc130;
+
+buff131 <= buff130;
+acc131 <= tap131 * buff131;
+acc130_131 <= acc129_130 + acc131;
+
+buff132 <= buff131;
+acc132 <= tap132 * buff132;
+acc131_132 <= acc130_131 + acc132;
+
+buff133 <= buff132;
+acc133 <= tap133 * buff133;
+acc132_133 <= acc131_132 + acc133;
+
+buff134 <= buff133;
+acc134 <= tap134 * buff134;
+acc133_134 <= acc132_133 + acc134;
+
+buff135 <= buff134;
+acc135 <= tap135 * buff135;
+acc134_135 <= acc133_134 + acc135;
+
+buff136 <= buff135;
+acc136 <= tap136 * buff136;
+acc135_136 <= acc134_135 + acc136;
+
+buff137 <= buff136;
+acc137 <= tap137 * buff137;
+acc136_137 <= acc135_136 + acc137;
+
+buff138 <= buff137;
+acc138 <= tap138 * buff138;
+acc137_138 <= acc136_137 + acc138;
+
+buff139 <= buff138;
+acc139 <= tap139 * buff139;
+acc138_139 <= acc137_138 + acc139;
+
+buff140 <= buff139;
+acc140 <= tap140 * buff140;
+acc139_140 <= acc138_139 + acc140;
+
+buff141 <= buff140;
+acc141 <= tap141 * buff141;
+acc140_141 <= acc139_140 + acc141;
+
+buff142 <= buff141;
+acc142 <= tap142 * buff142;
+acc141_142 <= acc140_141 + acc142;
+
+buff143 <= buff142;
+acc143 <= tap143 * buff143;
+acc142_143 <= acc141_142 + acc143;
+
+buff144 <= buff143;
+acc144 <= tap144 * buff144;
+acc143_144 <= acc142_143 + acc144;
+
+buff145 <= buff144;
+acc145 <= tap145 * buff145;
+acc144_145 <= acc143_144 + acc145;
+
+buff146 <= buff145;
+acc146 <= tap146 * buff146;
+acc145_146 <= acc144_145 + acc146;
+
+buff147 <= buff146;
+acc147 <= tap147 * buff147;
+acc146_147 <= acc145_146 + acc147;
+
+buff148 <= buff147;
+acc148 <= tap148 * buff148;
+acc147_148 <= acc146_147 + acc148;
+
+buff149 <= buff148;
+acc149 <= tap149 * buff149;
+acc148_149 <= acc147_148 + acc149;
+
+buff150 <= buff149;
+acc150 <= tap150 * buff150;
+acc149_150 <= acc148_149 + acc150;
+
+buff151 <= buff150;
+acc151 <= tap151 * buff151;
+acc150_151 <= acc149_150 + acc151;
+
+buff152 <= buff151;
+acc152 <= tap152 * buff152;
+acc151_152 <= acc150_151 + acc152;
+
+buff153 <= buff152;
+acc153 <= tap153 * buff153;
+acc152_153 <= acc151_152 + acc153;
+
+buff154 <= buff153;
+acc154 <= tap154 * buff154;
+acc153_154 <= acc152_153 + acc154;
+
+buff155 <= buff154;
+acc155 <= tap155 * buff155;
+acc154_155 <= acc153_154 + acc155;
+
+buff156 <= buff155;
+acc156 <= tap156 * buff156;
+acc155_156 <= acc154_155 + acc156;
+
+buff157 <= buff156;
+acc157 <= tap157 * buff157;
+acc156_157 <= acc155_156 + acc157;
+
+buff158 <= buff157;
+acc158 <= tap158 * buff158;
+acc157_158 <= acc156_157 + acc158;
+
+buff159 <= buff158;
+acc159 <= tap159 * buff159;
+acc158_159 <= acc157_158 + acc159;
+
+buff160 <= buff159;
+acc160 <= tap160 * buff160;
+acc159_160 <= acc158_159 + acc160;
+
+buff161 <= buff160;
+acc161 <= tap161 * buff161;
+acc160_161 <= acc159_160 + acc161;
+
+buff162 <= buff161;
+acc162 <= tap162 * buff162;
+acc161_162 <= acc160_161 + acc162;
+
+buff163 <= buff162;
+acc163 <= tap163 * buff163;
+acc162_163 <= acc161_162 + acc163;
+
+buff164 <= buff163;
+acc164 <= tap164 * buff164;
+acc163_164 <= acc162_163 + acc164;
+
+buff165 <= buff164;
+acc165 <= tap165 * buff165;
+acc164_165 <= acc163_164 + acc165;
+
+buff166 <= buff165;
+acc166 <= tap166 * buff166;
+acc165_166 <= acc164_165 + acc166;
+
+buff167 <= buff166;
+acc167 <= tap167 * buff167;
+m_axis_fir_tdata <= acc165_166 + acc167;
+
