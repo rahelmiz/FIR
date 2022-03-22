@@ -150,13 +150,48 @@ class GenFIRCode:
                     f.write("\t\tsignal[{}]= -16'd{};\n".format(i, d[1:].strip()))
                 else:
                     f.write("\t\tsignal[{}]= 16'd{};\n".format(i, d.strip()))
-        
+    '''
+    inputs: 
+        inPath: path to a txt file of large, hard to look at values. 
+        numBits: lenght of the binary string
+        outPath: path to output file
+        BinaryBase: True if the base of the input is binary
+    outputs: a new text fil, where each line contains a binary string, 
+    where every 4 digits sepearated by a space.
+    '''
+    def prettyFormatBinaryStrings( self, inPath, outPath, inputBase, length):
+        with open(inPath, "r") as f:
+            data = f.readlines()
+        with open(outPath, "w+") as f:
+            for binString in data:
+                f.write(self._prettyFormatBinaryString(binString.strip(),inputBase, length ) + "\n")
+            
+    def _prettyFormatBinaryString( self, string, inputBase, length):
+        assert length % 4 == 0, "length of string must be a mult. of 4"
+        prettyBinaryString = ""
+        if inputBase == 2:
+            
+            for i in range(0,(len(string)),4):
+                prettyBinaryString += string[i:i+4] + " "
+            return prettyBinaryString
+        else:
+            DecValue = int(string, inputBase)
+            BinaryString = bin(DecValue if DecValue>0 else DecValue+(1<<length))
+            BinaryString = BinaryString[2:]
+            
+            if DecValue >0 : 
+                BinaryString = BinaryString.zfill(length)  
+            
+            for i in range(0,(len(BinaryString)),4):
+                prettyBinaryString += BinaryString[i:i+4] + " "
+            return prettyBinaryString
         
 if __name__ == "__main__":
     F = GenFIRCode(168, "coeffs.txt", "out0.txt")
     #F.genTestBench("TenthInput.txt", "FIR_tb_samples")
     #F.convert2hex("TenthOutput.txt", "TenthOutputHex.txt")
     F.genLUT("TenthInput.txt", "sigLUT.txt")
+    F.prettyFormatBinaryStrings("TenthOutput.txt", "TenthOutputBin_pretty.txt", 10, 40)
 '''
   Taps = genDeclaration("wire", 16, "tap", 168)
   Buffs = genDeclaration("reg", 16, "buff", 168, signed = True)

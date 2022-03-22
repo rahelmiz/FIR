@@ -176,7 +176,7 @@ assign tap163 = 16'hffe8;
 assign tap164 = 16'hffe6;
 assign tap165 = 16'hffe8;
 assign tap166 = 16'hffec;
-assign tap167 = 16'hffe6;;
+assign tap167 = 16'hffe6;
 ________________ end tap assignments ________________
 
 ________________ multiply accumulate stage ________________
