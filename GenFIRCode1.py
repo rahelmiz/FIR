@@ -185,7 +185,7 @@ class GenFIRCode:
             for i in range(0,(len(BinaryString)),4):
                 prettyBinaryString += BinaryString[i:i+4] + " "
             return prettyBinaryString
-        
+    
 if __name__ == "__main__":
     F = GenFIRCode(168, "coeffs.txt", "out0.txt")
     #F.genTestBench("TenthInput.txt", "FIR_tb_samples")

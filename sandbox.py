@@ -7,25 +7,35 @@ Created on Tue Mar 22 15:03:15 2022
 
 string = "1111111111111111111110001101001000000110"
 string = "10" 
-def _prettyFormatBinaryString( string, inputBase, length ):
-    assert length % 4 == 0, "length of string must be a mult. of 4"
-    prettyBinaryString = ""
-    if inputBase == 2:
-        
-        for i in range(0,(len(string)),4):
-            prettyBinaryString += string[i:i+4] + " "
-        return prettyBinaryString
-    else:
-        DecValue = int(string, inputBase)
-        BinaryString = bin(DecValue if DecValue>0 else DecValue+(1<<length))
-        BinaryString = BinaryString[2:]
-        
-        print(len(BinaryString))
-        for i in range(0,(len(BinaryString)),4):
-            prettyBinaryString += BinaryString[i:i+4] + " "
-        print(BinaryString)
-        return prettyBinaryString
-        
-        
+import re
 
-x= _prettyFormatBinaryString("-8", 10, 8)
+import numpy as np
+import matplotlib.pyplot as plt
+outputBin = "0011001100110010"
+want = "1100"
+simOutput = "0000111001110011"
+def rescale(coeffs):
+    coeffs_new = []
+    for coe in coeffs:
+        if coe > 32767:
+            coe -=65536
+        coeffs_new.append(coe)
+    return coeffs_new
+
+with open ("coeffs.txt", "r") as f:
+    coeffsHex = f.readlines()
+
+coeffs = [int(i, 16)  for i in coeffsHex]
+
+coeffs = rescale(coeffs)
+
+with open("coeffsDecimal.txt", "w+") as f:
+    for coe in coeffs:
+        f.write(str(coe))
+        f.write("\n")
+plt.plot(coeffs)
+
+with open('coeffsDecimal.txt') as f:
+    coeffs = f.readlines()
+coeffs = [int(coe) for coe in coeffs]
+plt.plot(coeffs)
