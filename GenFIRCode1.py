@@ -185,13 +185,37 @@ class GenFIRCode:
             for i in range(0,(len(BinaryString)),4):
                 prettyBinaryString += BinaryString[i:i+4] + " "
             return prettyBinaryString
-    
+    ''' convert a signed or unsigned int to twos complement'''
+    def f(self, n):
+        nbits = n.bit_length() + 1
+        return f"{n & ((1 << nbits) - 1):0{nbits}b}"
+
+    ''' convert a signed or unsigned int to twos complement and pad'''
+    def _convert2binary(self, n, numBits):
+        truncNum = self.f(n)
+        numBits2pad = numBits - (n.bit_length() + 1)
+        if n < 0:
+            bits2pad = '1'*numBits2pad
+        else:
+            bits2pad = '0'*numBits2pad
+        return bits2pad + truncNum
+    def convert2binary(self, inPath, outPath, numBits):
+        with open(inPath, "r") as f:
+            data = f.readlines()
+        with open(outPath, "w+") as f:
+            for val in data:
+                val1 = self._convert2binary(int(val), numBits)
+                f.write(val1)
+                f.write("\n")
+            
 if __name__ == "__main__":
     F = GenFIRCode(168, "coeffs.txt", "out0.txt")
     #F.genTestBench("TenthInput.txt", "FIR_tb_samples")
     #F.convert2hex("TenthOutput.txt", "TenthOutputHex.txt")
     F.genLUT("TenthInput.txt", "sigLUT.txt")
     F.prettyFormatBinaryStrings("TenthOutput.txt", "TenthOutputBin_pretty.txt", 10, 40)
+    F.convert2binary("hardware_output.txt", "hardware_output_bin.txt", 16)
+    F.convert2binary("TenthOutput.txt", "TenthOutput_bin.txt", 16)
 '''
   Taps = genDeclaration("wire", 16, "tap", 168)
   Buffs = genDeclaration("reg", 16, "buff", 168, signed = True)
